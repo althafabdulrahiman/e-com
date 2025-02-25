@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="header-1">
         <Link to='/'> <h1>MultiCart</h1></Link>
         </div>
-        <div className="header-2">
+        <div className={`header-2 ${isMenuOpen ? 'show' : ''}`}>
           <Link to='/'><h2>Home</h2></Link>
           <Link to='/component/Router/Shop'><h2>Shop</h2></Link>
           <Link to='/component/Router/Cart'><h2>Cart</h2></Link>
