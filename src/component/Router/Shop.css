@@ -1,0 +1,82 @@
+.shop{
+
+}
+.shop-header2 a{
+    text-decoration: none;
+    color: black;
+    gap: 10px;
+    
+}
+.shop-header2 li{
+    list-style-type:none;
+    background-color: rgb(1, 103, 158);
+    margin: 20px auto;
+    width: calc(33.33% - 20px);  
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    gap: 20px;
+    
+}
+.shop-header{
+    background-color: rgb(106, 208, 236);
+    height: 70px;
+    text-align: center;
+    padding-top: 30px;
+}
+.shop-header2 h4{
+    padding: 10px;
+}
+.shop-header2 ul{
+    margin: 30px auto;
+    display:flex ;
+   width: 450px;
+    background-color: white;
+    flex-wrap: wrap;
+    
+}
+
+.align-center{
+    text-align: center;
+}
+
+
+.shop-header1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgb(245, 241, 241);
+}
+.shop-header1 img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.shop-header1 ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    gap: 100px;
+    margin: 100px;
+}
+.shop-header1 ul li{
+        flex: 1 1 200px;
+        align-items: center;
+        /* margin-left: 70px; */
+}
+.shop-header1 h5{
+    width: 200px;
+    text-align: center;
+}
+.shop-header1 h4{
+    margin: 10px;
+    font-size: 20px;
+    width: 200px;
+    text-align: center;
+}
+.shop-header1 a{
+    text-decoration: none;
+    color: black;
+}

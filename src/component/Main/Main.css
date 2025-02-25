@@ -1,0 +1,23 @@
+.main{
+    background-color: rgb(245, 241, 241);
+    width: 100%;
+
+    margin: 10px auto;
+    
+    padding: 100px 0;
+}
+.main h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.main p{
+    letter-spacing: 1px;
+    padding: 5px;
+    text-align: center;
+    margin: 20px;
+}
+.main-inner{
+    width: 400px;
+   margin: 5px auto;
+
+}

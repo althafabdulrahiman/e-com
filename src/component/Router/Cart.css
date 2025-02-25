@@ -1,0 +1,29 @@
+.Cart{
+    width: 100%;
+    margin: 10px 0;
+    background-color: rgb(245, 241, 241);
+    height: auto;
+    
+}
+.Cart img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+.Cart ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-left: 400px;
+    gap: 145px;
+    margin: 40px;
+}
+.Cart ul li{
+        /* flex: 1 1 200px; */
+        align-items: center;
+        width: 200px;
+}
+.align-center{
+    text-align: center;
+}
