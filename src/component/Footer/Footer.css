@@ -1,4 +1,4 @@
-.footer{
+/* .footer{
     background-color: white;
 }
 .footer-inner{
@@ -46,4 +46,92 @@
 }
 .footer-inner p{
     margin: 20px 0;
+} */
+
+.footer {
+    background-color: white;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px; /* Adjusted padding */
+    margin: 20px; /* Adjusted margin */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.footer-1,
+.footer-2,
+.footer-3,
+.footer-4 {
+    margin: 10px;
+    padding: 15px; /* Adjusted padding */
+    text-align: center;
+    flex: 1 1 300px; /* Allow items to grow and shrink */
+    min-width: 250px; /* Minimum width for each section */
+}
+
+.footer-1 {
+    background-color: rgb(219, 164, 164);
+}
+
+.footer-2 {
+    background-color: rgb(197, 197, 239);
+}
+
+.footer-3 {
+    background-color: rgb(244, 244, 193);
+}
+
+.footer-4 {
+    background-color: rgb(206, 247, 206);
+}
+
+.footer-inner h2 {
+    margin-top: 15px; /* Adjusted margin */
+    font-size: 1.2em; /* Adjusted font size */
+}
+
+.footer-inner p {
+    margin: 15px 0; /* Adjusted margin */
+    font-size: 0.9em; /* Adjusted font size */
+    line-height: 1.6; /* Improved line height */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) { /* Tablet and smaller */
+    .footer-inner {
+        margin: 15px;
+    }
+
+    .footer-1,
+    .footer-2,
+    .footer-3,
+    .footer-4 {
+        flex: 1 1 45%; /* Adjust flex for tablet */
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .footer-inner {
+        flex-direction: column; /* Stack sections vertically */
+        margin: 10px;
+    }
+
+    .footer-1,
+    .footer-2,
+    .footer-3,
+    .footer-4 {
+        width: 95%; /* Make sections full-width */
+        margin: 5px auto;
+    }
+
+    .footer-inner h2 {
+        font-size: 1.1em;
+    }
+
+    .footer-inner p {
+        font-size: 0.85em;
+    }
 }

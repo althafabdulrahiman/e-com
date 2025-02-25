@@ -1,4 +1,4 @@
-.main{
+/* .main{
     background-color: rgb(245, 241, 241);
     width: 100%;
 
@@ -20,4 +20,71 @@
     width: 400px;
    margin: 5px auto;
 
+} */
+
+
+.main {
+    background-color: rgb(245, 241, 241);
+    width: 100%;
+    margin: 10px auto;
+    padding: 50px 0; /* Reduced padding for smaller screens */
+}
+
+.main h1 {
+    text-align: center;
+    margin-bottom: 20px; /* Reduced margin for smaller screens */
+    font-size: 1.8em; /* Adjusted font size for responsiveness */
+}
+
+.main p {
+    letter-spacing: 1px;
+    padding: 50px;
+    text-align: center;
+    margin: 10px; /* Reduced margin for smaller screens */
+    font-size: 1em; /* Adjusted font size for responsiveness */
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+.main-inner {
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 600px; /* Limit maximum width */
+    margin: 10px auto; /* Adjusted margin for responsiveness */
+}
+
+/* Media Queries */
+
+@media (max-width: 768px) { /* Tablet and smaller */
+    .main {
+        padding: 40px 0;
+    }
+
+    .main h1 {
+        font-size: 1.6em;
+    }
+
+    .main p {
+        font-size: 0.9em;
+    }
+
+    .main-inner {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .main {
+        padding: 30px 0;
+    }
+
+    .main h1 {
+        font-size: 1.4em;
+    }
+
+    .main p {
+        font-size: 0.85em;
+    }
+
+    .main-inner {
+        width: 95%;
+    }
 }

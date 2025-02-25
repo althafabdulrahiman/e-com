@@ -39,3 +39,41 @@
 .body{
     overflow-x: hidden;
 }
+
+/* Media Queries */
+
+@media (max-width: 768px) { /* Tablet and smaller */
+    .data ul {
+        gap: 10px;
+        margin: 10px;
+    }
+
+    .data ul li {
+        flex: 1 1 150px; /* Further reduce size on smaller screens */
+    }
+
+    .data img {
+        max-width: 150px;
+    }
+
+    .data h5,
+    .data h4 {
+        max-width: 150px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .data ul li {
+        flex: 1 1 100%; /* Stack items on mobile */
+    }
+
+    .data img {
+        max-width: 80%; /* Adjust image size for mobile */
+    }
+
+    .data h5,
+    .data h4 {
+        max-width: 80%;
+    }
+}
