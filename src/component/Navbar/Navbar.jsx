@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
@@ -7,6 +7,12 @@ const Navbar = () => {
 
   const cartItems=useSelector((state)=>state.cart.cartItems)
   const cartCount=cartItems.length;
+  const [isMenuOpen,setIsMenuOpen]=useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <div>
       <nav>
@@ -27,7 +33,12 @@ const Navbar = () => {
           )}
           </Link>
         </div>
-      
+        <div className="hamburger" onClick={toggleMenu}>
+          <div></div>
+          <div></div>
+          <div></div>
+
+        </div>
       </div>
       </nav>
       
