@@ -30,6 +30,7 @@
     align-items: center;
 }
 
+
 .header-1 h1 {
     text-align: center;
     text-decoration: none;
@@ -61,7 +62,7 @@
     text-decoration: none;
 }
 
-.cart-count {
+/* .cart-count {
     position: absolute;
     top: 9px;
     right: 77px;
@@ -72,6 +73,19 @@
     font-size: 10px;
     min-width: 14px;
     text-align: center;
+} */
+/* ... (your existing CSS) ... */
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-left: 5px; /* Add some space between "Cart" and the count */
+  }
+  .close-menu{
+    display: none;
 }
 
 /* Responsive Styles */
@@ -99,6 +113,9 @@
 }
 
 @media (max-width: 480px) {
+    .close-menu{
+        display: block;
+    }
     .header {
         flex-direction: column;
         align-items: flex-start;
@@ -111,27 +128,46 @@
     }
 
     .header-2 {
-        width: 100%;
-        margin-left: 0;/*reset margin-left*/
+        width: 70%; /* Adjusted width for mobile */
+        margin-left: 0;
         margin-right: 0;
         flex-direction: column;
         align-items: flex-start;
         display: none;
+        position: fixed; /* Added for right side slide */
+        top: 65px; /* Adjusted top */
+        right: -100%; /* Start off-screen */
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.858); /* Add background color */
+        transition: right 0.3s ease-in-out; /* Add transition */
+        z-index: 10; /* Ensure it's on top */
     }
 
     .header-2.show {
         display: flex;
+        right: 0;
+
     }
 
     .header-2 h2 {
         margin-bottom: 5px;
+        margin-left: 20px;
+        color: white;
+
+    }
+    .header-2 svg {
+        margin-bottom: 5px;
+        margin-left: 20px;
+        color: white;
+
     }
 
     .hamburger {
         display: block;
         cursor: pointer;
         align-self: flex-end;
-    }
+        
+    }   
 
     .hamburger div {
         width: 25px;
@@ -144,4 +180,14 @@
         right: 20px;
         top: 10px;
     }
+    .close-menu{
+        background: none;
+        border: none;
+        color: rgb(252, 252, 252);
+        font-size: 20px;
+        cursor: pointer;
+        align-self: flex-end;
+        margin: 10px;
+        font-weight: bold;
+      }
 }

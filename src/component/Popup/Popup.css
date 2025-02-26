@@ -1,76 +1,3 @@
-/* .popup{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 99;
-    background-color: rgba(0,0,0, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
-}
-    .popup h3 {
-      color: white;
-      margin-top: 75px;
-      text-align: center;
-    }
-.popup-content{
-    background-color: rgb(17, 17, 17);
-    width: 600px;
-    height: 600px;
-    border-radius: 5px;
-    padding: 20px;  
-}
-.popup img{
-    margin-left: 190px;
-    margin-top: 70px;
-    border-radius: 8px;
-}
-.popup h2{
-    color: black;
-    width: 80px;
-    background-color: white;
-    margin-left: 250px;
-    text-align: center;
-    margin-top: 20px ;
-
-}
-.popup-close{
-  
-    top: 25px;
-    right: 25px;
-    color: white;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all ease 0.3s;
-    margin-left: 475px;
-
-    &:hover {
-      color: #ff4848;
-    }
-}
-.popup-content button{
-    width: 100px;
-    height: 40px;
-    border-radius: 8px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 65px;
-    margin-left: 460px;
-    background-color: rgb(204, 204, 25);
-    &:hover {
-        background-color: #ff4848;
-      }
-    
-} */
-
-
 .popup {
     position: fixed;
     left: 0;
@@ -83,43 +10,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.popup h3 {
+  }
+  
+  .popup h3 {
     color: white;
-    margin-top: 20px; /* Adjusted margin */
+    margin-top: 20px;
     text-align: center;
-    font-size: 1.5em; /* Adjusted font size */
-}
-
-.popup-content {
+    font-size: 1.5em;
+  }
+  .popup h5 {
+   width: 35px;
+  }
+  
+  .popup-content {
     background-color: rgb(17, 17, 17);
-    width: 90%; /* Adjusted width */
-    max-width: 600px; /* Limit maximum width */
-    height: auto; /* Make height flexible */
+    width: 90%;
+    max-width: 600px;
+    height: auto;
     border-radius: 5px;
     padding: 20px;
-    position: relative; /* For absolute positioning of close button */
-}
-
-.popup img {
-    width: 60%; /* Adjusted image width */
-    max-width: 300px; /* Limit maximum image width */
-    display: block; /* Remove extra space below image */
-    margin: 20px auto; /* Center image */
+    position: relative;
+  }
+  
+  .popup img {
+    width: 80%; /* Increased image width for better responsiveness */
+    max-width: 350px; /* Increased max width */
+    display: block;
+    margin: 20px auto;
     border-radius: 8px;
-}
-
-.popup h2 {
+    object-fit: contain; /* Prevent image distortion */
+  }
+  
+  .popup h2 {
     color: black;
-    width: auto; /* Make width auto */
+    width: fit-content; /* Adjust width to content */
     background-color: white;
-    margin: 10px auto; /* Center price */
+    margin: 10px auto;
     text-align: center;
-    padding: 5px 10px; /* Add padding to price */
-}
-
-.popup-close {
+    padding: 5px 10px;
+  }
+  
+  .popup-close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -128,56 +59,59 @@
     font-size: 14px;
     cursor: pointer;
     transition: all ease 0.3s;
-}
-
-.popup-content button {
-    width: auto; /* Make button width auto */
-    padding: 10px 20px; /* Add padding to button */
+  }
+  
+  .popup-content button {
+    width: auto;
+    padding: 10px 20px;
     border-radius: 8px;
     cursor: pointer;
     text-align: center;
     font-size: 15px;
     font-weight: bold;
-    margin: 20px auto; /* Center button */
+    margin: 20px auto;
     background-color: rgb(204, 204, 25);
-    display: block; /* Make button block-level */
-}
-
-.popup-close:hover,
-.popup-content button:hover {
+    display: block;
+  }
+  
+  .popup-close:hover,
+  .popup-content button:hover {
     color: #ff4848;
     background-color: #ff4848;
-}
-
-/* Media Queries */
-
-@media (max-width: 768px) { /* Tablet and smaller */
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 768px) {
     .popup h3 {
-        font-size: 1.3em;
+      font-size: 1.3em;
     }
-
+  
     .popup-content {
-        padding: 15px;
+      padding: 15px;
     }
-
+  
     .popup img {
-        width: 70%;
-        margin: 15px auto;
+      width: 90%; /* Increased image width for tablet */
+      margin: 15px auto;
     }
-}
-
-@media (max-width: 480px) { /* Mobile */
+  }
+  
+  @media (max-width: 480px) {
     .popup h3 {
-        font-size: 1.1em;
+      font-size: 1.1em;
     }
-
+    .popup h5 {
+width: 50px;      }
+  
     .popup img {
-        width: 80%;
-        margin: 10px auto;
+      width: 50%; /* Increased image width for mobile */
+      margin: 10px auto;
     }
-
+  
     .popup-content button {
-        font-size: 14px;
-        padding: 8px 15px;
+      font-size: 14px;
+      padding: 8px 15px;
     }
-}
+    
+  }

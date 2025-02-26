@@ -1,79 +1,95 @@
-.data{
+.data {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     background-color: rgb(245, 241, 241);
-}
-.data img{
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .data img {
     width: 200px;
     height: 200px;
     border-radius: 10px;
-}
-.data ul{
+    object-fit: contain; /* Prevent image distortion */
+  }
+  
+  .data ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    padding: 0;
+    padding: 20px; /* Add padding for better spacing */
+    width: 90%; /* Use percentage for responsiveness */
+    gap: 20px; /* Reduced gap for better flow */
+    margin: 20px auto; /* Center the list and add margin */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .data ul li {
+    flex: 1 1 250px; /* Adjust flex basis for item size */
+    display: flex;
+    flex-direction: column; /* Stack image and text */
+    align-items: center; /* Center items vertically */
+    text-align: center; /* Center text */
+  }
+  
+  .data h5 {
     width: 100%;
-    gap: 100px;
-    margin: 100px;
-}
-.data ul li{
-        flex: 1 1 200px;
-        align-items: center;
-}
-.data h5{
-    width: 200px;
-    text-align: center;
-}
-.data h4{
-    margin: 10px;
-    font-size: 20px;
-    width: 200px;
-    text-align: center;
-}
-.data a{
+    margin-top: 10px;
+    font-size: 1em; /* Use relative font size */
+  }
+  
+  .data h4 {
+    margin: 10px 0;
+    font-size: 1.2em; /* Use relative font size */
+    width: 100%;
+  }
+  
+  .data a {
     text-decoration: none;
     color: black;
-}
-.body{
-    overflow-x: hidden;
-}
-
-/* Media Queries */
-
-@media (max-width: 768px) { /* Tablet and smaller */
-    .data ul {
-        gap: 10px;
-        margin: 10px;
-    }
-
+    display: flex;
+    flex-direction: column; /* Stack image and text */
+    align-items: center;
+  }
+  
+  /* Media Queries */
+  
+  @media (max-width: 768px) {
     .data ul li {
-        flex: 1 1 150px; /* Further reduce size on smaller screens */
+      flex: 1 1 200px;
     }
-
+  
     .data img {
-        max-width: 150px;
+      width: 150px;
+      height: 150px;
     }
-
+  }
+  
+  @media (max-width: 480px) {
+    .data ul li {
+      flex: 1 1 100%;
+    }
+  
+    .data img {
+      width: 80%;
+      height: auto; /* Maintain aspect ratio */
+    }
+  
     .data h5,
     .data h4 {
-        max-width: 150px;
-        font-size: 0.9em;
+      font-size: 1em;
     }
-}
-
-@media (max-width: 480px) { /* Mobile */
-    .data ul li {
-        flex: 1 1 100%; /* Stack items on mobile */
-    }
-
-    .data img {
-        max-width: 80%; /* Adjust image size for mobile */
-    }
-
-    .data h5,
-    .data h4 {
-        max-width: 80%;
-    }
-}
+  }
+  
+  @media (max-width: 320px) {
+      .data ul{
+          padding:10px;
+          gap: 10px;
+      }
+      .data ul li{
+          flex: 1 1 100%;
+      }
+      .data img{
+          width: 90%;
+      }
+  }

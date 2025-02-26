@@ -126,7 +126,7 @@ const data=items.map((item,index)=>{
 
           <h2>
 <ul>
-{!loading ?  data : <Loading />}
+{!loading ?  data : " "}
 </ul></h2>
           </div>
 

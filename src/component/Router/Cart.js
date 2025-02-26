@@ -15,8 +15,8 @@ const Cart = () => {
     
       <li key={index}>
         <img src={item.image} alt=''/>
-        <h3>{item.title}</h3>
-        <h2>{item.price}</h2>
+        <h5>{item.title}</h5>
+        <h2>${item.price}</h2>
       </li>
     
   ))

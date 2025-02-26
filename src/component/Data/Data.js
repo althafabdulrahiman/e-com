@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import './Data.css'
+import "../Router/Shop.css"
+
 import Loading from '../Loading/Loading'
 import Popup from '../Popup/Popup'
 
@@ -61,13 +62,17 @@ const data=items.map((item,index)=>{
 })
 
   return (
-    <div className='data'>
+    <div className='shop'>
+        <div className="shop-head">
+        <h1>Big Deals</h1>
+        </div>
+        <div className="shop-header1">
  {pop &&  <Popup off={off} title={title} image={image} price={price}/>}
 <ul>
    {!loading ?  data : <Loading />}
     </ul>
    
- 
+    </div>
 
     </div>
   )

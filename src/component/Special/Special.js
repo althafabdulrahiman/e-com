@@ -2,7 +2,8 @@ import React,{useContext, useEffect, useState} from 'react'
 import axios from 'axios'
 import Popup from '../Popup/Popup'
 import Loading from '../Loading/Loading'
-import './special.css'
+import "../Router/Shop.css"
+
 import { AllMenuContext } from '../Router/Shop'
 
 const Special = () => {
@@ -65,16 +66,17 @@ const data=items.map((item,index)=>{
     console.log("special item:",allMenus);
     
   return (
-    <div className='special'>
-        <div className="special-header">
+    <div className='shop'>
+        <div className="shop-head">
             <h1>{allMenus}</h1>
         </div>
+        <div className="shop-header1">
          {pop &&  <Popup off={off} title={title} image={image} price={price}/>}
 <ul>
    {!loading ?  data : <Loading />}
     </ul>
    
-        
+    </div>
         
         </div>
   )
